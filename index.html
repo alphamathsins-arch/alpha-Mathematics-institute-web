@@ -1,1 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpha Maths Institute</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f8fc;
+color:#333;
+}
+
+header{
+background:#083d77;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+color:white;
+font-size:24px;
+font-weight:bold;
+}
+
+.logo img{
+height:60px;
+border-radius:8px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD54F;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(8,61,119,.85),rgba(8,61,119,.85)),
+url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+max-width:700px;
+margin:auto;
+margin-bottom:35px;
+}
+
+.btn{
+background:#FFD54F;
+color:#083d77;
+padding:16px 35px;
+border-radius:35px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+display:inline-block;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:90px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#083d77;
+}
+
+.about{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+margin-bottom:20px;
+color:#083d77;
+}
+
+.card a{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#083d77;
+color:white;
+text-decoration:none;
+border-radius:25px;
+}
+
+.card a:hover{
+background:#1565c0;
+}
+
+.why{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.box{
+background:#083d77;
+color:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+.resources{
+text-align:center;
+background:#eef4fb;
+padding:70px 10%;
+}
+
+.resources a{
+display:inline-block;
+padding:16px 35px;
+background:#083d77;
+color:white;
+text-decoration:none;
+border-radius:30px;
+margin-top:20px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+font-size:20px;
+margin:15px;
+}
+
+footer{
+background:#083d77;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:60px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="logo.jpg" alt="Alpha Maths Institute Logo">
+
+<div>
+Alpha Maths Institute
+</div>
+
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#why">Why Us</a>
+<a href="#resources">Resources</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Helping Students Reach Their Goals</h1>
+
+<p>
+Empowering learners to succeed in mathematics through personalised tutoring, academic excellence, and a passion for helping every student reach their full potential.
+</p>
+
+<a class="btn"
+href="https://docs.google.com/forms/d/e/1FAIpQLSdRSv-OD9klQvFNfHD-S_jQlmw01r2OXQbUtaia6hLSumLPYA/viewform?usp=publish-editor"
+target="_blank">
+Join Today
+</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+
+<img src="logo.jpg">
+
+<div>
+
+<h3>Our Story</h3>
+
+<p>
+
+Alpha Maths Institute was founded with a vision of helping learners overcome challenges in mathematics and unlock their full academic potential. What began as a commitment to supporting individual students has grown into a trusted learning institute known for quality tutoring and excellent results.
+
+</p>
+
+<br>
+
+<p>
+
+We believe every learner can excel in mathematics when provided with the right guidance, encouragement, and learning environment. Through personalised lessons, small group sessions, and dedicated tutors, Alpha Maths Institute continues to empower students to build confidence, improve marks, and achieve their academic goals.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+
+<h3>One-on-One Sessions</h3>
+
+<p>
+Personalised tutoring tailored to each student's strengths and areas for improvement.
+</p>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSv-OD9klQvFNfHD-S_jQlmw01r2OXQbUtaia6hLSumLPYA/viewform?usp=publish-editor" target="_blank">
+Register
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Group Sessions</h3>
+
+<p>
+Interactive lessons where learners collaborate, practise, and grow together.
+</p>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdRSv-OD9klQvFNfHD-S_jQlmw01r2OXQbUtaia6hLSumLPYA/viewform?usp=dialog" target="_blank">
+Register
+</a>
+
+  
+<div class="card">
+
+<h3>winter lesson</h3>
+
+<p>
+Interactive lessons where learners collaborate, practise, and grow together.
+</p>
+
+<a href="https://forms.gle/u8CQ4WiywvgGgQL26" target="_blank">
+Register
+</a>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="why">
+
+<h2 class="section-title">Why Choose Alpha Maths Institute?</h2>
+
+<div class="why">
+
+<div class="box">
+<h3>Experienced Tutors</h3>
+<p>Dedicated educators passionate about mathematics and student success.</p>
+</div>
+
+<div class="box">
+<h3>Personalised Learning</h3>
+<p>Lessons designed to suit every learner's pace and ability.</p>
+</div>
+
+<div class="box">
+<h3>Exam Preparation</h3>
+<p>Focused revision sessions to build confidence and improve results.</p>
+</div>
+
+<div class="box">
+<h3>Supportive Environment</h3>
+<p>We inspire confidence and help students develop a love for mathematics.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="resources" id="resources">
+
+<h2 class="section-title">Study Resources</h2>
+
+<p>
+Access worksheets, notes, past papers, and additional learning materials.
+</p>
+
+<a href="https://drive.google.com/drive/folders/1vgSrWDiMndlvVxoygjtpJiWsMoFBoAXB" target="_blank">
+Open Resources
+</a>
+
+  <br><br>
+
+  <img src="logo1.jpg"
+    alt="study resources"
+    style="width:100%; max-width:700px;border-radius:15px;
+    box-shaow:0 5px rgba(0,0,0,.2)">
+</section>
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<p><strong>Phone:</strong> 065 651 4026</p>
+
+<p><strong>Email:</strong> alphamathsins@gmail.com</p>
+
+<p><srong>Account number:</srong> my absa account
+
+  account holder:Lesego Kgasoane
+  
+  account number:4123880943
+  
+  branch code:632005
+  
+  account type:current
+</p>
+
+</section>
+
+<footer>
+
+© 2026 Alpha Maths Institute | Empowering Learners to Succeed in Mathematics
+
+</footer>
+
+</body>
+  </html>
