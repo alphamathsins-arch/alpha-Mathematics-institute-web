@@ -14,22 +14,29 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// IMPORTANT: prevent crash
+// Make sure page loads first
 window.addEventListener("DOMContentLoaded", () => {
 
     window.login = function () {
 
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const message = document.getElementById("message");
 
-        signInWithEmailAndPassword(auth, email, password)
+        if (!email || !password) {
+            alert("Inputs not found. Check HTML IDs.");
+            return;
+        }
+
+        signInWithEmailAndPassword(auth, email.value, password.value)
         .then(() => {
             window.location.href = "dashboard.html";
         })
         .catch((error) => {
-            alert(error.message);
             console.log(error);
+            message.innerText = error.message;
         });
+
     };
 
 });
