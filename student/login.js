@@ -14,17 +14,22 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-window.login = function () {
+// IMPORTANT: prevent crash
+window.addEventListener("DOMContentLoaded", () => {
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    window.login = function () {
 
-    signInWithEmailAndPassword(auth, email, password)
-    .then(() => {
-        window.location.href = "dashboard.html";
-    })
-    .catch((error) => {
-        alert(error.message);
-        console.log(error);
-    });
-};
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+            window.location.href = "dashboard.html";
+        })
+        .catch((error) => {
+            alert(error.message);
+            console.log(error);
+        });
+    };
+
+});
