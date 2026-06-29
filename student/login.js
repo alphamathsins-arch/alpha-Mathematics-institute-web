@@ -1,43 +1,30 @@
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#0b3d91;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } 
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-.login-box{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    width:320px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
-}
+const firebaseConfig = {
+    apiKey: "AIzaSyBxlG1fUx5GAO7uAOXS4c2kQoM8gDRRfRk",
+    authDomain: "alpha-maths-institute.firebaseapp.com",
+    projectId: "alpha-maths-institute",
+    storageBucket: "alpha-maths-institute.firebasestorage.app",
+    messagingSenderId: "481339508435",
+    appId: "1:481339508435:web:4f889cda5a907d57d1b626"
+};
 
-h1{
-    color:#0b3d91;
-}
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-input{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    box-sizing:border-box;
-}
+window.login = function () {
 
-button{
-    width:100%;
-    padding:12px;
-    background:#0b3d91;
-    color:white;
-    border:none;
-    cursor:pointer;
-    font-size:16px;
-}
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-button:hover{
-    background:#062b66;
-      }
+    signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+        window.location.href = "dashboard.html";
+    })
+    .catch((error) => {
+        alert(error.message);
+        console.log(error);
+    });
+};
